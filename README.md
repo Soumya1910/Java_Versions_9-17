@@ -25,3 +25,5 @@ This repository contains different features published in different versions of J
     - takeWhile() and dropWhile() are predicate which validates a condition.
     - `limit(number)` and `takeWhile(predicate)`
     - `skip(number)` and `dropWhile(predicate)`
+
+5. <b>IntStream iterate method</b>
