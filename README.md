@@ -19,5 +19,6 @@ This repository contains different features published in different versions of J
     - Java 9, finalize() is deprecated.
 
 3. No _ in variable name
+    - From Java 9, _ is a keyword, it can't be used as an identifier.
 
 4. 
