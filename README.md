@@ -14,8 +14,8 @@ This repository contains different features published in different versions of J
     - We have finalize() method but not sure when this method is called.
     - Java 7, we have try-with-resource implementation. `try(Resource resource = new Resource()) {}`
     - We can see this try-with-resource is tightly coupled.
-    - Java 9 provides implementation where we can pass any Resource class or subclass which is implemented AutoCloseable interface.
-    - Restriction for this implementation is Resource class should be final or Effectively final.
+    - Java 9 provides implementation where we can pass any Resource class or subclass which is implemented <b>AutoCloseable interface</b>.
+    - Restriction for this implementation is <b>Resource class should be final or Effectively final</b>.
     - Java 9, finalize() is deprecated.
 
 3. No _ in variable name
