@@ -27,3 +27,11 @@ This repository contains different features published in different versions of J
     - `skip(number)` and `dropWhile(predicate)`
 
 5. <b>IntStream iterate method</b>
+    - iterate has 2 overloaded method:
+        - `iterate(seed, predicate, function)`
+        - `iterate(seed, function)`
+
+6. <b>Optional - ifPresentOrElse</b>
+    - `ifPresentOrElse(consumer, runnable)`
+    - consumer function is treated as if condition
+    - runnable is treated as else part
