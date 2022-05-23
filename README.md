@@ -35,3 +35,6 @@ This repository contains different features published in different versions of J
     - `ifPresentOrElse(consumer, runnable)`
     - consumer function is treated as if condition
     - runnable is treated as else part
+
+7. <b>Optional.stream()</b>
+    - optional element can be converted into stream for further stream operation.

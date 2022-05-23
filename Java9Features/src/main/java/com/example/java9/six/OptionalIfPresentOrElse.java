@@ -3,6 +3,7 @@ package com.example.java9.six;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Stream;
 
 public class OptionalIfPresentOrElse {
     public static void process(Optional<Integer> result){
@@ -30,6 +31,14 @@ public class OptionalIfPresentOrElse {
                 ()-> System.out.println("No value")); // runnable  // else part
     }
 
+    public static void process2(Stream<Integer> intStream) {
+        intStream.forEach(System.out::println);
+    }
+
+    public static void process3(Optional<Integer> result) {
+        result.or(()-> Optional.of(0));
+    }
+
     public static void main(String[] args) {
         List<Integer> intList = Arrays.asList(10,20,30,40,50,60,70,25,35,45,65,75,85,90);
         // want to find out the first element which is greater than 70
@@ -40,5 +49,11 @@ public class OptionalIfPresentOrElse {
         process(intList.stream()
                 .filter(e-> e>100)
                 .findFirst());
+
+        process2(intList.stream()
+                .filter(e -> e<50)
+                        .findFirst()// u can convert an Optional<T> to stream to iterate
+                        .stream()
+                );
     }
 }
