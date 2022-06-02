@@ -8,6 +8,11 @@ This repository contains different features published in different versions of J
     - Interface can contain private method.
     - Interface can have static private method.
     - Interface can't have default private method. It's an <b>Illegal combination of modifiers default and private</b>.
+    - <b>Clean code principal: </b>
+        - Default methods should be sort like all other methods.
+        - Use private methods to extract shared code of default methods.
+        - Use default methods for providing standard implementations for new interface code.
+        - Don't use default methods to extend existing interfaces unless it's necessary.
 
 2. <b>Effectively final in try-with-resource </b>
     - Garbage collector is meant to collect garbage resources. It cleans up the memory by collecting those objects which has null reference. But in our real life, we open so many external resources like DB Connection, File System, Socket, TCP Protocol etc. But GC doesn't collect any external resources.
@@ -17,6 +22,9 @@ This repository contains different features published in different versions of J
     - Java 9 provides implementation where we can pass any Resource class or subclass which is implemented <b>AutoCloseable interface</b>.
     - Restriction for this implementation is <b>Resource class should be final or Effectively final</b>.
     - Java 9, finalize() is deprecated.
+    - <b>Clean code principal: </b>
+        - Always prefer try-with-resources, don't use try-finally and definitely don't use finalize method to close the instance.
+        - Be aware of convinient methods such as `InputStream.transferTo`.
 
 3. <b>No _ in variable name</b>
     - From Java 9, _ is a keyword, it can't be used as an identifier.
