@@ -8,11 +8,39 @@ This repository contains different features published in different versions of J
     - Interface can contain private method.
     - Interface can have static private method.
     - Interface can't have default private method. It's an <b>Illegal combination of modifiers default and private</b>.
+    - From Java 9 onwards, interfaces can have 6 type of members:
+        1. Constant Variable
+        2. Abstract Methods
+        3. Default Methods
+        4. Static Methods
+        5. Private Methods
+        6. Private Static Methods
     - <b>Clean code principal: </b>
         - Default methods should be sort like all other methods.
         - Use private methods to extract shared code of default methods.
         - Use default methods for providing standard implementations for new interface code.
         - Don't use default methods to extend existing interfaces unless it's necessary.
+    - <b>Interface vs Abstract Class after Java 9</b>
+
+|               | Interface     | Abstract  |
+| ------------- |:-------------:| ---------:|
+| Constructor   | No            | Yes       |
+| Static Fields | Yes           | Yes       |
+| Non-Static Fields   | No            | Yes       |
+| Final Fields   | Yes            | Yes       |
+| Non-Final Fields   | No            | Yes       |
+| Private Fields   | No            | Yes       |
+| Protected Fields & Methods   | No            | Yes       |
+| Public Fields & Methods   | Yes            | Yes       |
+| Abstract Methods   | Yes            | Yes       |
+| Static Methods   | Yes            | Yes       |
+| Non-Static Methods   | Yes            | Yes       |
+| Final Methods   | No            | Yes       |
+| Non-Final Methods   | Yes            | Yes       |
+| Default Methods   | Yes            | No       |
+| Private Methods   | Yes            | Yes       |
+| Private Static Methods   | Yes            | Yes       |
+    
 
 2. <b>Effectively final in try-with-resource </b>
     - Garbage collector is meant to collect garbage resources. It cleans up the memory by collecting those objects which has null reference. But in our real life, we open so many external resources like DB Connection, File System, Socket, TCP Protocol etc. But GC doesn't collect any external resources.
