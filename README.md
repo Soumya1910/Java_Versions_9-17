@@ -74,3 +74,17 @@ This repository contains different features published in different versions of J
 
 7. <b>Optional.stream()</b>
     - optional element can be converted into stream for further stream operation.
+
+8. <b>Addition of List.of() method</b>
+    - `List.of()` method generates an Immutable class of size N.
+    - `List.of()` method produces <b>ImmutableCollections$List2</b> when there are two elements passed as arguments.
+    - `List.of()` method produces <b>ImmutableCollections$List1</b> when there is one elements passed as arguments.
+    - `List.of()` method produces <b>ImmutableCollections$List0</b> when there is no elements passed as arguments. 
+    - `List.of()` method produces <b>ImmutableCollections$ListN</b> when there are more than 3 elements passed as arguments.
+
+9. <b>Addition of Set.of() method</b>
+    - `Set.of()` method throws an error if duplicate elements are passed as argument.
+    - `Set.of()` method also produces <b>ImmutableCollections$SetN</b>
+
+10. <b>Addition of Map.of() method</b>
+    - `Map.of()` method throws an error if odd number arguments are passed.
