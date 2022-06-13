@@ -108,3 +108,39 @@ This repository contains different features published in different versions of J
         - `jshell --start PRINTING`: It can also be started with PRINTING option to make the print methods available as top-level methods, allowing us to use methods like `print(), println(), printf()` directly.
 
             ![jshell_3.PNG](https://github.com/Soumya1910/Java_Versions_9-17/blob/master/Java9Features/document/images/jshell_3.PNG)
+
+        - If both the features of PRINTING and DEFAULT(for imports) are required, we can start jshell like this 
+        `jshell --start DEFAULT --start PRINTING`
+
+        - To exit from the Jshell, we can use `/exit` or `Ctrl+D`.
+
+    - <b>Executing Snippets using Jshell</b>: Following snippets can be executed in Jshell
+        - expression and statement
+        - import statement
+        - variable, method, class definition.
+
+            ![jshell_4.PNG](https://github.com/Soumya1910/Java_Versions_9-17/blob/master/Java9Features/document/images/jshell_4.PNG)
+
+            ![jshell_5.PNG](https://github.com/Soumya1910/Java_Versions_9-17/blob/master/Java9Features/document/images/jshell_5.PNG)
+
+        - In jshell, using semicolon(;) is not mandatory except block statement.
+        - Auto-complete can be attempted using the Tab key.
+
+    - <b>Useful Commands: </b>
+        - `/list :` List all source snippets with their id or name. Use `/list <id or name>` to get a specific snippet.
+        - `/drop <id or name> : ` Removes a source of snippet.
+        - `/edit <id or name> `
+        - `/vars : `Lists all the variables declared in the session.
+        - `/methods : `Lists all the methods declared in the session.
+        - `/types : ` List all the types declared in the session.
+        - `/imports : ` List of all imported items.
+        - `open <file_path> : ` Load a source from the given path
+        - `/save <file_path> : `Stores the Jshell session into a file.
+        - `/reset : `Resets Jshell and its session.
+        - `/history : `Display a history of what has been types in the session
+        - `/env [--class-path <path>] [--module-path <path>] [--add-modules <modules>] : ` Sets class or module path to use compiled classes or modules.
+
+    - <b>Exception : </b>
+        - In Jshell, there is no need to handle checked exceptions. If a snippet throws a checked exception, the stacktrace will be shown and Jshell will continue. Though if a snippet throwing a checked exception is used inside a method, it will have to be handled or declared to be thrown. 
+
+        
