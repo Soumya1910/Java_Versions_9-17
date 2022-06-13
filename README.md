@@ -98,7 +98,13 @@ This repository contains different features published in different versions of J
 
     - Jshell can be started by using the following commands:
         - `jshell`
-        - `jshell --start default`
-        - `jshell --start PRINTING`
 
-Jshell image: ![jshell_1.PNG](https://github.com/Soumya1910/Java_Versions_9-17/blob/master/Java9Features/document/images/jshell_1.PNG)
+            ![jshell_1.PNG](https://github.com/Soumya1910/Java_Versions_9-17/blob/master/Java9Features/document/images/jshell_1.PNG)
+
+        - `jshell --start default` It's similar like above. It makes several imprts available by default. We can use `/imports` command:
+
+            ![jshell_2.PNG](https://github.com/Soumya1910/Java_Versions_9-17/blob/master/Java9Features/document/images/jshell_2.PNG)
+
+        - `jshell --start PRINTING`: It can also be started with PRINTING option to make the print methods available as top-level methods, allowing us to use methods like `print(), println(), printf()` directly.
+
+            ![jshell_3.PNG](https://github.com/Soumya1910/Java_Versions_9-17/blob/master/Java9Features/document/images/jshell_3.PNG)
