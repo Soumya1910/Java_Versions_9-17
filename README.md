@@ -76,18 +76,25 @@ This repository contains different features published in different versions of J
     - optional element can be converted into stream for further stream operation.
 
 8. <b>Addition of List.of() method</b>
+    - Prior Java 9, we used to create unmodifiable list by using `Collections.unmodifiableList()`. But it has a drawback. We can't modify immutableList but we can add element in original list which reflects in immutableList as well.
     - `List.of()` method generates an Immutable class of size N.
+    - Any attempt to modify any `List.of()` method, either directly or through iterator object will throw `UnsupportedOperationException`.
     - `List.of()` method produces <b>ImmutableCollections$List2</b> when there are two elements passed as arguments.
     - `List.of()` method produces <b>ImmutableCollections$List1</b> when there is one elements passed as arguments.
     - `List.of()` method produces <b>ImmutableCollections$List0</b> when there is no elements passed as arguments. 
     - `List.of()` method produces <b>ImmutableCollections$ListN</b> when there are more than 3 elements passed as arguments.
 
 9. <b>Addition of Set.of() method</b>
+    - Prior Java 9, we used to create unmodifiable set by using like this: `Set<String> immutableSet = Collections.unmodifiableSet(new HashSet<String>(Arrays.asList("English", "Mathematics", "English")));`. The problem is to create an immutable set, a list should be created first which is an overhead and it's not very efficient.
+    - Any attempt to modify `Set.of()` method either directly or through their iterator object will throw `UnsupportedOperationException`.
     - `Set.of()` method throws an error if duplicate elements are passed as argument.
     - `Set.of()` method also produces <b>ImmutableCollections$SetN</b>
 
 10. <b>Addition of Map.of() method</b>
     - `Map.of()` method throws an error if odd number arguments are passed.
+    - Any attempt to modify `Map.of()` method either directly or through their iterator object will throw `UnsupportedOperationException`.
+    - It doesn't allow null in key values. If null values are added it throws NullPointerException.
+    - It doesn't allow duplicate key values. If duplicate key values are added it throws `IllegalArgumentException`.
 
 11. <b> JSHELL </b>
     - How JShell can be executed without having a class/method.
