@@ -1,4 +1,4 @@
-package com.example.java9.one;
+package com.example.java.java9.one;
 
 /*
 Interface can contain private method.

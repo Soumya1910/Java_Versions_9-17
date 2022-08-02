@@ -1,4 +1,4 @@
-package com.example.java9.three;
+package com.example.java.java9.three;
 
 public class UnderscoreAsVariable {
     public static void main(String[] args) {

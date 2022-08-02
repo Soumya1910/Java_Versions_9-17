@@ -1,4 +1,4 @@
-package com.example.java9.eight;
+package com.example.java.java9.eight;
 
 import java.util.*;
 

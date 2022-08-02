@@ -150,4 +150,31 @@ This repository contains different features published in different versions of J
     - <b>Exception : </b>
         - In Jshell, there is no need to handle checked exceptions. If a snippet throws a checked exception, the stacktrace will be shown and Jshell will continue. Though if a snippet throwing a checked exception is used inside a method, it will have to be handled or declared to be thrown. 
 
-        
+
+
+
+
+
+
+## Java 10 Features
+
+1. <b>Introduce var keyword</b>
+
+    - Whenever we are not defining any specific datatype, we can declare it as var.
+    - var is not a Java reserve keyword cz java wants to make to it backward compatible. previously declared variable shouldn't throw any error.
+    - When we declare one variable as var and assign some type of value, we cannot assign different type of value in that variable.
+    - <b>var limitation</b>: 
+        - We cannot assign any null value to var `var x = null;` not allowed.
+        - We cannot replace the target type of lambda expression with var type. It throws an error `Lambda Expressions need an explicit target-type.`
+
+        `Consumer<Integer> l = (i) -> {
+            System.out.println(i);
+        };` --- It's a valid expression
+
+        `var l2 = (i) -> {
+            System.out.println(i);
+        };` --- It throws error.
+
+        - We can't define class variable as var.
+
+2. <b>Change in Collectors API</b>

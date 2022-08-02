@@ -1,4 +1,4 @@
-package com.example.java9.six;
+package com.example.java.java9.six;
 
 import java.util.Arrays;
 import java.util.List;

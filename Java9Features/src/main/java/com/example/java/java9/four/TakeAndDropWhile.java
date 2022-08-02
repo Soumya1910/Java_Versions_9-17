@@ -1,4 +1,4 @@
-package com.example.java9.four;
+package com.example.java.java9.four;
 
 import java.util.Arrays;
 import java.util.List;

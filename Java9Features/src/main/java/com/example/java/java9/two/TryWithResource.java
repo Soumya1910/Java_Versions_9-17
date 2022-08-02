@@ -1,4 +1,4 @@
-package com.example.java9.two;
+package com.example.java.java9.two;
 
 class Resource{
 

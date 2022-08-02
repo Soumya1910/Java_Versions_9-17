@@ -1,4 +1,4 @@
-package com.example.java9.ten;
+package com.example.java.java9.ten;
 
 import java.util.Map;
 
