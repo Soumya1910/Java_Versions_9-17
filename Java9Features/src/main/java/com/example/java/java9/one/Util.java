@@ -16,6 +16,6 @@ public interface Util {
     public static int getResource2() {return getResourceCount2();} // static method
 
     private int getResourceCount(){ return 4; } // you can have a private method in interface
-    private static int getResourceCount2() { return 4;} // default static method is possible
+    private static int getResourceCount2() { return 4;} // private static method is possible
     //private default int getResourceCount3() { return 4;} // default and private method is not possible
 }

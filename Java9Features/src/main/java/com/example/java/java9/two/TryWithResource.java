@@ -36,7 +36,7 @@ public class TryWithResource {
 
     public static void use(ResourceAfterJava9 resource){
         // Disadvantage is this resource will be available throughout this function scope.
-        // Resource should be final or effectively final (Effectively final means we can't mutated this object)
+        // Resource should be final or effectively final (Effectively final means we can't mutate this object)
         //resource = resource; // it will give compilation error as resource should be final or effectively final.
 
         try(resource){

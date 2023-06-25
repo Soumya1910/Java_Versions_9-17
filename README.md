@@ -16,7 +16,7 @@ This repository contains different features published in different versions of J
         5. Private Methods
         6. Private Static Methods
     - <b>Clean code principal: </b>
-        - Default methods should be sort like all other methods.
+        - Default methods should be short like all other methods.
         - Use private methods to extract shared code of default methods.
         - Use default methods for providing standard implementations for new interface code.
         - Don't use default methods to extend existing interfaces unless it's necessary.
@@ -52,7 +52,10 @@ This repository contains different features published in different versions of J
     - Java 9, finalize() is deprecated.
     - <b>Clean code principal: </b>
         - Always prefer try-with-resources, don't use try-finally and definitely don't use finalize method to close the instance.
-        - Be aware of convinient methods such as `InputStream.transferTo`.
+        - Be aware of convenient methods such as `InputStream.transferTo`.
+          - `public long transferTo(OutputStream out) throws IOException`
+          - Reads all bytes from this input stream and writes the bytes to the given output stream in the order that they are read. On return, this input stream will be at end of stream. This method does not close either stream.
+    
 
 3. <b>No _ in variable name</b>
     - From Java 9, _ is a keyword, it can't be used as an identifier.
@@ -61,11 +64,20 @@ This repository contains different features published in different versions of J
     - takeWhile() and dropWhile() are predicate which validates a condition.
     - `limit(number)` and `takeWhile(predicate)`
     - `skip(number)` and `dropWhile(predicate)`
+    - `limit(number)`: opens the door and close it forever after certain number
+    - `skip(number)`: opens the door forever after certain number
+    - In Java 8, there was no scope to validate one condition (Predicate) and do skip or limit operation
+    - `intList.stream().takeWhile(e-> e < 50).forEach(System.out::println);`: Stream will be 
+      closed when 50 is found.
+    - `intList.stream().dropWhile(e-> e < 50).forEach(System.out::println);`: Stream will 
+      start considering value when this condition satisfies.
 
 5. <b>IntStream iterate method</b>
     - iterate has 2 overloaded method:
         - `iterate(seed, predicate, function)`
+          - `IntStream.iterate(0, e-> e<=15, e-> e+2).forEach(System.out::prinln);`
         - `iterate(seed, function)`
+          - `IntStream.iterate(0, e-> e+2).takeWhile(e-> e<=15).forEach(System.out::println);`
 
 6. <b>Optional - ifPresentOrElse</b>
     - `ifPresentOrElse(consumer, runnable)`
